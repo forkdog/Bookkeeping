@@ -1,0 +1,112 @@
+[
+    {
+        "name": "吃喝",
+        "image": "catering/吃喝_icon",
+        "sort": 0
+    },
+    {
+        "name": "饮料",
+        "image": "catering/饮料_icon",
+        "sort": 1
+    },
+    {
+        "name": "零食",
+        "image": "catering/零食_icon",
+        "sort": 2
+    },
+    {
+        "name": "水果",
+        "image": "catering/水果_icon",
+        "sort": 3
+    },
+    {
+        "name": "买菜",
+        "image": "catering/买菜_icon",
+        "sort": 4
+    },
+    {
+        "name": "交通",
+        "image": "traffic/交通_icon",
+        "sort": 5
+    },
+    {
+        "name": "娱乐",
+        "image": "recreation/娱乐_icon",
+        "sort": 6
+    },
+    {
+        "name": "聚会",
+        "image": "recreation/聚会_icon",
+        "sort": 7
+    },
+    {
+        "name": "日用品",
+        "image": "shopping/日用品_icon",
+        "sort": 8
+    },
+    {
+        "name": "话费网费",
+        "image": "daily/话费网费_icon",
+        "sort": 9
+    },
+    {
+        "name": "衣服",
+        "image": "shopping/衣服_icon",
+        "sort": 10
+    },
+    {
+        "name": "护肤美妆",
+        "image": "shopping/护肤美妆_icon",
+        "sort": 11
+    },
+    {
+        "name": "水电煤",
+        "image": "daily/水电煤_icon",
+        "sort": 12
+    },
+    {
+        "name": "房租",
+        "image": "housing/房租_icon",
+        "sort": 13
+    },
+    {
+        "name": "房贷",
+        "image": "housing/房贷_icon",
+        "sort": 14
+    },
+    {
+        "name": "加油",
+        "image": "car/加油_icon",
+        "sort": 15
+    },
+    {
+        "name": "汽车维修",
+        "image": "car/汽车维修_icon",
+        "sort": 16
+    },
+    {
+        "name": "红包",
+        "image": "humanfeelings/红包_icon",
+        "sort": 17
+    },
+    {
+        "name": "物流",
+        "image": "other/物流_icon",
+        "sort": 18
+    },
+    {
+        "name": "医疗",
+        "image": "other/医疗_icon",
+        "sort": 19
+    },
+    {
+        "name": "宠物",
+        "image": "other/宠物_icon",
+        "sort": 20
+    },
+    {
+        "name": "其他",
+        "image": "other/其他_icon",
+        "sort": 21
+    }
+]

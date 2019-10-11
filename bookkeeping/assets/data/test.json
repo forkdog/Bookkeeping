@@ -1,0 +1,18 @@
+{
+    "code": 200,
+    "data": [
+        {
+            "id": 1,
+            "money": 123.12,
+            "remark": "备注",
+            "type": 1,
+            "categoryName": "吃喝",
+            "image": "路径",
+            "createTime": "2019",
+            "createTimestamp": 1518243781000,
+            "updateTime": "2019",
+            "updateTimestamp": 1518243781000
+        }
+    ],
+    "msg": "成功"
+}

@@ -1,0 +1,47 @@
+[
+    {
+        "name": "工资",
+        "image": "income/工资_icon",
+        "sort": 0
+    },
+    {
+        "name": "奖金",
+        "image": "income/奖金_icon",
+        "sort": 1
+    },
+    {
+        "name": "补贴",
+        "image": "income/补贴_icon",
+        "sort": 2
+    },
+    {
+        "name": "兼职",
+        "image": "income/兼职_icon",
+        "sort": 3
+    },
+    {
+        "name": "租金",
+        "image": "income/租金_icon",
+        "sort": 4
+    },
+    {
+        "name": "房子",
+        "image": "income/房子_icon",
+        "sort": 5
+    },
+    {
+        "name": "理财",
+        "image": "income/理财_icon",
+        "sort": 6
+    },
+    {
+        "name": "股票",
+        "image": "income/股票_icon",
+        "sort": 7
+    },
+    {
+        "name": "其他",
+        "image": "other/其他_icon",
+        "sort": 8
+    }
+]

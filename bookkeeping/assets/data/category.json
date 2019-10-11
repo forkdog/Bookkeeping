@@ -1,0 +1,272 @@
+[
+    {
+        "categoryName": "收入",
+        "items": [
+            {
+                "name": "工资",
+                "image": "income/工资_icon"
+            },
+            {
+                "name": "奖金",
+                "image": "income/奖金_icon"
+            },
+            {
+                "name": "补贴",
+                "image": "income/补贴_icon"
+            },
+            {
+                "name": "兼职",
+                "image": "income/兼职_icon"
+            },
+            {
+                "name": "租金",
+                "image": "income/租金_icon"
+            },
+            {
+                "name": "房子",
+                "image": "income/房子_icon"
+            },
+            {
+                "name": "理财",
+                "image": "income/理财_icon"
+            },
+            {
+                "name": "股票",
+                "image": "income/股票_icon"
+            }
+        ]
+    },
+    {
+        "categoryName": "餐饮",
+        "items": [
+            {
+                "name": "吃喝",
+                "image": "catering/吃喝_icon"
+            },
+            {
+                "name": "早餐",
+                "image": "catering/早餐_icon"
+            },
+            {
+                "name": "午餐",
+                "image": "catering/午餐_icon"
+            },
+            {
+                "name": "晚餐",
+                "image": "catering/晚餐_icon"
+            },
+            {
+                "name": "夜宵",
+                "image": "catering/夜宵_icon"
+            },
+            {
+                "name": "零食",
+                "image": "catering/零食_icon"
+            },
+            {
+                "name": "水果",
+                "image": "catering/水果_icon"
+            },
+            {
+                "name": "买菜",
+                "image": "catering/买菜_icon"
+            },
+            {
+                "name": "饮料",
+                "image": "catering/饮料_icon"
+            },
+            {
+                "name": "咖啡",
+                "image": "catering/咖啡_icon"
+            },
+            {
+                "name": "酒水",
+                "image": "catering/酒水_icon"
+            }
+        ]
+    },
+    {
+        "categoryName": "购物",
+        "items": [
+            {
+                "name": "日用品",
+                "image": "shopping/日用品_icon"
+            },
+            {
+                "name": "衣服",
+                "image": "shopping/衣服_icon"
+            },
+            {
+                "name": "护肤美妆",
+                "image": "shopping/护肤美妆_icon"
+            },
+            {
+                "name": "电子产品",
+                "image": "shopping/电子产品_icon"
+            },
+            {
+                "name": "电器",
+                "image": "shopping/电器_icon"
+            }
+        ]
+    },
+    {
+        "categoryName": "娱乐",
+        "items": [
+            {
+                "name": "娱乐",
+                "image": "recreation/娱乐_icon"
+            },
+            {
+                "name": "游戏",
+                "image": "recreation/游戏_icon"
+            },
+            {
+                "name": "聚会",
+                "image": "recreation/聚会_icon"
+            },
+            {
+                "name": "运动",
+                "image": "recreation/运动_icon"
+            },
+            {
+                "name": "旅行",
+                "image": "recreation/旅行_icon"
+            }
+        ]
+    },
+    {
+        "categoryName": "日常",
+        "items": [
+            {
+                "name": "日常生活",
+                "image": "daily/日常生活_icon"
+            },
+            {
+                "name": "话费网费",
+                "image": "daily/话费网费_icon"
+            },
+            {
+                "name": "水电煤",
+                "image": "daily/水电煤_icon"
+            },
+            {
+                "name": "清洁",
+                "image": "daily/清洁_icon"
+            }
+        ]
+    },
+    {
+        "categoryName": "人情",
+        "items": [
+            {
+                "name": "红包",
+                "image": "humanfeelings/红包_icon"
+            },
+            {
+                "name": "送礼",
+                "image": "humanfeelings/送礼_icon"
+            }
+        ]
+    },
+    {
+        "categoryName": "住房",
+        "items": [
+            {
+                "name": "房租",
+                "image": "housing/房租_icon"
+            },
+            {
+                "name": "房贷",
+                "image": "housing/房贷_icon"
+            }
+        ]
+    },
+    {
+        "categoryName": "交通",
+        "items": [
+            {
+                "name": "交通",
+                "image": "traffic/交通_icon"
+            },
+            {
+                "name": "公交",
+                "image": "traffic/公交_icon"
+            },
+            {
+                "name": "打车",
+                "image": "traffic/打车_icon"
+            },
+            {
+                "name": "地铁",
+                "image": "traffic/地铁_icon"
+            },
+            {
+                "name": "高铁",
+                "image": "traffic/高铁_icon"
+            },
+            {
+                "name": "自行车",
+                "image": "traffic/自行车_icon"
+            },
+            {
+                "name": "飞机",
+                "image": "traffic/飞机_icon"
+            }
+        ]
+    },
+    {
+        "categoryName": "汽车",
+        "items": [
+            {
+                "name": "加油",
+                "image": "car/加油_icon"
+            },
+            {
+                "name": "汽车维修",
+                "image": "car/汽车维修_icon"
+            },
+            {
+                "name": "车险",
+                "image": "car/车险_icon"
+            },
+            {
+                "name": "买车",
+                "image": "car/买车_icon"
+            }
+        ]
+    },
+    {
+        "categoryName": "其他",
+        "items": [
+            {
+                "name": "物流",
+                "image": "other/物流_icon"
+            },
+            {
+                "name": "医疗",
+                "image": "other/医疗_icon"
+            },
+            {
+                "name": "学习",
+                "image": "other/学习_icon"
+            },
+            {
+                "name": "考试",
+                "image": "other/考试_icon"
+            },
+            {
+                "name": "宠物",
+                "image": "other/宠物_icon"
+            },
+            {
+                "name": "保险",
+                "image": "other/保险_icon"
+            },
+            {
+                "name": "其他",
+                "image": "other/其他_icon"
+            }
+        ]
+    }
+]
