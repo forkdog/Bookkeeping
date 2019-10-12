@@ -1,4 +1,3 @@
-
 import 'package:bookkeeping/bill/pages/bill_list_page.dart';
 import 'package:bookkeeping/bill/pages/bill_router.dart';
 import 'package:bookkeeping/charts/charts_page.dart';
@@ -7,6 +6,7 @@ import 'package:bookkeeping/util/fluro_navigator.dart';
 import 'package:bookkeeping/widgets/highlight_well.dart';
 import 'package:fluro/fluro.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:oktoast/oktoast.dart';
 
@@ -65,7 +65,9 @@ class _MainPageState extends State<MainPage> {
             controller: _pageController,
             onPageChanged: _onPageChanged,
             children: _pages,
-            // physics: NeverScrollableScrollPhysics(), // 禁止滑动
+            physics: defaultTargetPlatform == TargetPlatform.iOS
+                ? NeverScrollableScrollPhysics()
+                : AlwaysScrollableScrollPhysics(), // 禁止滑动
           ),
         ),
       ),

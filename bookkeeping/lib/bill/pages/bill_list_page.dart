@@ -92,7 +92,7 @@ class _BillState extends State<Bill>
     });
   }
 
-  double maxOffset = 120;
+  double maxOffset = 150;
   double opacityValue = 0;
   void _onScrol(offset) {
     double alpha = offset / maxOffset;
@@ -139,8 +139,7 @@ class _BillState extends State<Bill>
                 if (notification is ScrollUpdateNotification &&
                     notification.depth == 0) {
                   //如果是
-                  _onScrol(
-                      notification.metrics.pixels);
+                  _onScrol(notification.metrics.pixels);
                 }
               },
               child: CustomScrollView(
@@ -215,7 +214,7 @@ class _BillState extends State<Bill>
         elevation: 0.0, //去除导航栏阴影
         pinned: false, //导航栏固定
         expandedHeight: MediaQuery.of(context).padding.top +
-            ScreenUtil.getInstance().setWidth(340),
+            ScreenUtil.getInstance().setWidth(390),
         flexibleSpace: _flexibleSpaceBar(),
         // actions: <Widget>[
         //   CupertinoButton(
@@ -270,26 +269,24 @@ class _BillState extends State<Bill>
           children: <Widget>[
             Expanded(
               flex: 2,
-              child: Stack(
-                alignment: Alignment.bottomCenter,
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                mainAxisAlignment: MainAxisAlignment.end,
                 children: <Widget>[
-                  Positioned(
-                    bottom: 20,
-                    child: Text(
-                        '${_monthModel.isBudget == 1 ? Utils.formatDouble(double.parse((_monthModel.budget - _monthModel.expenMoney).toStringAsFixed(2))) : Utils.formatDouble(double.parse((_monthModel.incomeMoney - _monthModel.expenMoney).toStringAsFixed(2)))}',
-                        style: TextStyle(
-                            fontSize: ScreenUtil.getInstance().setSp(56),
-                            color: Colors.white)),
-                  ),
-                  Positioned(
-                    bottom: 0,
-                    child: Text(
-                      '本月${_monthModel.isBudget == 1 ? '预算' : ''}结余',
+                  Text(
+                      '${_monthModel.isBudget == 1 ? Utils.formatDouble(double.parse((_monthModel.budget - _monthModel.expenMoney).toStringAsFixed(2))) : Utils.formatDouble(double.parse((_monthModel.incomeMoney - _monthModel.expenMoney).toStringAsFixed(2)))}',
                       style: TextStyle(
-                          fontSize: ScreenUtil.getInstance().setSp(32),
-                          color: Colors.white),
-                    ),
-                  )
+                          fontWeight: FontWeight.w500,
+                          fontSize: ScreenUtil.getInstance().setSp(56),
+                          color: Colors.white)),
+                  Text(
+                    '本月${_monthModel.isBudget == 1 ? '预算' : ''}结余',
+                    style: TextStyle(
+                        fontWeight: FontWeight.w400,
+                        fontSize: ScreenUtil.getInstance().setSp(26),
+                        color: Colors.white),
+                  ),
+                  Gaps.vGap(ScreenUtil.getInstance().setHeight(15)),
                 ],
               ),
             ),
@@ -303,7 +300,7 @@ class _BillState extends State<Bill>
     );
   }
 
-  /// 预算、支出和收入widget
+  ///支出和收入widget
   Widget _amountWidget() {
     return Row(
       crossAxisAlignment: CrossAxisAlignment.center,
@@ -315,7 +312,7 @@ class _BillState extends State<Bill>
               alignment: Alignment.center,
               children: <Widget>[
                 Positioned(
-                  bottom: 15,
+                  bottom: ScreenUtil.getInstance().setHeight(16),
                   child: Column(
                     children: <Widget>[
                       Text(
@@ -328,7 +325,8 @@ class _BillState extends State<Bill>
                       ),
                       Text('${Utils.formatDouble(double.parse(_month))}月支出',
                           style: TextStyle(
-                              fontSize: ScreenUtil.getInstance().setSp(32),
+                              fontWeight: FontWeight.w400,
+                              fontSize: ScreenUtil.getInstance().setSp(26),
                               color: Colors.white))
                     ],
                   ),
@@ -344,7 +342,7 @@ class _BillState extends State<Bill>
               alignment: Alignment.center,
               children: <Widget>[
                 Positioned(
-                  bottom: 15,
+                  bottom: ScreenUtil.getInstance().setHeight(16),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: <Widget>[
@@ -358,7 +356,8 @@ class _BillState extends State<Bill>
                       ),
                       Text('${Utils.formatDouble(double.parse(_month))}月收入',
                           style: TextStyle(
-                              fontSize: ScreenUtil.getInstance().setSp(32),
+                              fontWeight: FontWeight.w400,
+                              fontSize: ScreenUtil.getInstance().setSp(26),
                               color: Colors.white))
                     ],
                   ),
