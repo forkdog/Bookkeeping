@@ -6,6 +6,7 @@ import 'package:bookkeeping/res/colours.dart';
 import 'package:bookkeeping/res/styles.dart';
 import 'package:bookkeeping/routers/fluro_navigator.dart';
 import 'package:bookkeeping/util/utils.dart';
+import 'package:bookkeeping/widgets/app_bar.dart';
 import 'package:bookkeeping/widgets/highlight_well.dart';
 import 'package:bookkeeping/widgets/input_textview_dialog.dart';
 import 'package:bookkeeping/widgets/number_keyboard.dart';
@@ -61,7 +62,8 @@ class _BookkeeppingState extends State<Bookkeepping>
       _expenObjects.addAll(models);
 
       if (widget.recordModel != null && widget.recordModel.type == 1) {
-        _selectedIndexLeft = _expenObjects.indexWhere((item) => item.name == widget.recordModel.categoryName);
+        _selectedIndexLeft = _expenObjects
+            .indexWhere((item) => item.name == widget.recordModel.categoryName);
       }
 
       setState(() {});
@@ -78,7 +80,8 @@ class _BookkeeppingState extends State<Bookkeepping>
       _inComeObjects.addAll(models);
 
       if (widget.recordModel != null && widget.recordModel.type == 2) {
-        _selectedIndexRight = _inComeObjects.indexWhere((item) => item.name == widget.recordModel.categoryName);
+        _selectedIndexRight = _inComeObjects
+            .indexWhere((item) => item.name == widget.recordModel.categoryName);
       }
 
       setState(() {});
@@ -107,7 +110,7 @@ class _BookkeeppingState extends State<Bookkeepping>
       }
 
       if (widget.recordModel.money != null) {
-        _numberString = widget.recordModel.money.toString();
+        _numberString = Utils.formatDouble(double.parse(_numberString = widget.recordModel.money.toStringAsFixed(2)));
       }
 
       if (widget.recordModel.type == 2) {
@@ -168,24 +171,24 @@ class _BookkeeppingState extends State<Bookkeepping>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        centerTitle: true,
-        title: TabBar(
+      appBar: MyAppBar(
+        // centerTitle: true,
+        titleWidget: TabBar(
           // tabbar菜单
           controller: _tabController,
           tabs: tabs,
-          indicatorColor: Colors.white,
-          unselectedLabelColor: Colors.white60,
-          labelColor: Colors.white,
-          labelStyle: TextStyle(fontSize: 18),
+          indicatorColor: Colours.app_main,
+          unselectedLabelColor: Colours.app_main.withOpacity(0.8),
+          labelColor: Colours.app_main,
+          labelStyle: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
           indicatorWeight: 1, // 下划线高度
           isScrollable: true, // 是否可以滑动
         ),
         leading: CupertinoButton(
-          padding: EdgeInsets.zero,
+          padding: EdgeInsets.symmetric(vertical: 0, horizontal: 18),
           child: Icon(
             Icons.close,
-            color: Colors.white,
+            color: Colours.app_main,
           ),
           onPressed: () {
             NavigatorUtils.goBack(context);

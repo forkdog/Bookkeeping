@@ -198,7 +198,7 @@ class ChartState extends State<StatefulWidget>
                   Container(
                     // color: Colors.red,
                     width: MediaQuery.of(context).size.width,
-                    height: MediaQuery.of(context).size.width * 0.48,
+                    height: MediaQuery.of(context).size.width * 0.4,
                     child: OverflowBox(
                         minWidth: MediaQuery.of(context).size.width,
                         child: charts.PieChart(
@@ -288,7 +288,7 @@ class ChartState extends State<StatefulWidget>
                 '$_year-$_month',
                 style: TextStyle(
                     fontSize: ScreenUtil.getInstance().setSp(34),
-                    color: Colors.white),
+                    color: Colours.app_main),
               ),
               onPressed: () {
                 showDialog(

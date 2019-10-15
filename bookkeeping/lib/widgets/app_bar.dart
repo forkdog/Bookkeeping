@@ -18,7 +18,7 @@ double appbarHeight = 44;
 class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
   const MyAppBar(
       {Key key,
-      this.backgroundColor: Colours.app_main,
+      this.backgroundColor: Colors.white,
       this.title: "",
       this.backTitle: "",
       this.titleWidget,
@@ -26,7 +26,8 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
       this.backImg: "assets/images/icons/ic_back_black.png",
       this.onPressed,
       this.isBack: true,
-      this.barStyle: StatusBarStyle.light})
+      this.leading,
+      this.barStyle: StatusBarStyle.dark})
       : super(key: key);
 
   final Color backgroundColor;
@@ -37,6 +38,7 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
   final String actionName;
   final VoidCallback onPressed;
   final bool isBack;
+  final Widget leading;
   final StatusBarStyle barStyle;
 
   @override
@@ -78,38 +80,41 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
                   )
                 ],
               ),
-              isBack
-                  ? CupertinoButton(
-                      // color: Colors.orange,
-                      onPressed: () {
-                        FocusScope.of(context).requestFocus(FocusNode());
-                        Navigator.maybePop(context);
-                      },
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 8, vertical: 10),
-                      child: Row(
-                        mainAxisSize: MainAxisSize.min,
-                        children: <Widget>[
-                          Image.asset(
-                            backImg,
-                            color: _overlayStyle == SystemUiOverlayStyle.light
-                                ? Colors.white
-                                : Colours.dark,
-                          ),
-                          backTitle.isNotEmpty
-                              ? Text("返回",
-                                  style: TextStyle(
-                                    fontSize: 16,
-                                    color: _overlayStyle ==
-                                            SystemUiOverlayStyle.light
+              leading != null
+                  ? leading
+                  : isBack
+                      ? CupertinoButton(
+                          // color: Colors.orange,
+                          onPressed: () {
+                            FocusScope.of(context).requestFocus(FocusNode());
+                            Navigator.maybePop(context);
+                          },
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 8, vertical: 10),
+                          child: Row(
+                            mainAxisSize: MainAxisSize.min,
+                            children: <Widget>[
+                              Image.asset(
+                                backImg,
+                                color:
+                                    _overlayStyle == SystemUiOverlayStyle.light
                                         ? Colors.white
-                                        : Colours.dark,
-                                  ))
-                              : Gaps.empty
-                        ],
-                      ),
-                    )
-                  : Gaps.empty,
+                                        : Colours.app_main,
+                              ),
+                              backTitle.isNotEmpty
+                                  ? Text("返回",
+                                      style: TextStyle(
+                                        fontSize: 16,
+                                        color: _overlayStyle ==
+                                                SystemUiOverlayStyle.light
+                                            ? Colors.white
+                                            : Colours.app_main,
+                                      ))
+                                  : Gaps.empty
+                            ],
+                          ),
+                        )
+                      : Gaps.empty,
               Positioned(
                 right: 0.0,
                 child: Theme(

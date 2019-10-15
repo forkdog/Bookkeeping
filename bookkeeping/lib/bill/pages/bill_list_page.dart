@@ -151,7 +151,10 @@ class _BillState extends State<Bill>
           Container(
             height: appbarHeight + MediaQuery.of(context).padding.top,
             child: MyAppBar(
-              backgroundColor: Colours.app_main.withOpacity(1.0 * opacityValue),
+              barStyle: opacityValue < 0.3
+                  ? StatusBarStyle.light
+                  : StatusBarStyle.dark,
+              backgroundColor: Colors.white.withOpacity(1.0 * opacityValue),
               isBack: false,
               titleWidget: _buildTitle(),
             ),
@@ -183,7 +186,10 @@ class _BillState extends State<Bill>
       child: Text(
         '$_year-$_month',
         style: TextStyle(
-            fontSize: ScreenUtil.getInstance().setSp(34), color: Colors.white),
+            fontSize: ScreenUtil.getInstance().setSp(34),
+            color: opacityValue < 0.3
+                ? Colors.white.withOpacity(1.0 * (1 - opacityValue))
+                : Colours.app_main.withOpacity(1.0 * opacityValue)),
       ),
       onPressed: () {
         showDialog(
