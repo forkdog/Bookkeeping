@@ -31,7 +31,7 @@ dependencies:
   # Toast插件 https://github.com/OpenFlutter/flutter_oktoast
   oktoast: ^2.2.0
   # 网络库 https://github.com/flutterchina/dio
-  dio: ^2.1.0
+  dio: ">=2.1.0 <6.0.0"
   # https://github.com/ReactiveX/rxdart
   rxdart: ^0.22.1
   # 处理键盘事件 https://github.com/diegoveloper/flutter_keyboard_actions
